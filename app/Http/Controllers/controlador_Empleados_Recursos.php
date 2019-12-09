@@ -4,12 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Proyecto;
+use App\Empleado;
 
-
-use App\Http\Requests\validaciondeproyectos;
-
-class Controlador_Proyectos_Con_Recursos extends Controller
+class controlador_Empleados_Recursos extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,11 +15,9 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      */
     public function index()
     {
-        $proyecto=Proyecto::all();
+        $empleado=Empleado::all();
 
-
-        return view('proyectos.index',compact('proyecto'));
-
+        return view('empleados.index',compact('empleado'));
     }
 
     /**
@@ -32,7 +27,7 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      */
     public function create()
     {
-        return view('proyectos.create');
+        //
     }
 
     /**
@@ -41,17 +36,9 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(validaciondeproyectos $request)
+    public function store(Request $request)
     {
-        $proyecto=new Proyecto;
-        $proyecto->nombre=$request->nombre;
-        $proyecto->titulo=$request->titulo;
-        $proyecto->fechainicio=$request->fechainicio;
-        $proyecto->fechafin=$request->fechafin;
-        $proyecto->horasestimadas=$request->horasestimadas;
-        $proyecto->save();
-
-        return redirect('proyectos');
+        //
     }
 
     /**
@@ -62,9 +49,9 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      */
     public function show($id)
     {
-        $proyecto=Proyecto::find($id);
+        $empleado=Empleado::find($id);
 
-        return view('proyectos.show',compact('proyecto'));
+        return view('empleados.show',compact('empleado'));
     }
 
     /**
@@ -75,9 +62,7 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      */
     public function edit($id)
     {
-        $proyecto=Proyecto::find($id);
-
-        return view('proyectos.edit',compact('proyecto'));
+        //
     }
 
     /**
@@ -87,14 +72,9 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(validaciondeproyectos $request, $id)
+    public function update(Request $request, $id)
     {
-        $proyecto=Proyecto::find($id);
-
-        $proyecto->update($request->all());
-
-
-        return redirect('proyectos');
+        //
     }
 
     /**
@@ -105,10 +85,6 @@ class Controlador_Proyectos_Con_Recursos extends Controller
      */
     public function destroy($id)
     {
-        $proyecto=Proyecto::find($id);
-
-        $proyecto->delete();
-
-        return redirect('proyectos');
+        //
     }
 }

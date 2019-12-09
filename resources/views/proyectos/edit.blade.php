@@ -8,7 +8,7 @@
 
 		{{csrf_field()}}
 		
-		nombre: <input type="text" name="nombre" value="{{$proyecto->nombre}}"><br><br>
+		<p>nombre:  {{$proyecto->nombre}}</p>
 		titulo: <input type="text" name="titulo" value="{{$proyecto->titulo}}"><br><br>
 		fecha inicio: <input type="date" name="fechainicio" value="{{$proyecto->fechainicio}}"><br><br>
 		fecha fin: <input type="date" name="fechafin" value="{{$proyecto->fechafin}}"><br><br>

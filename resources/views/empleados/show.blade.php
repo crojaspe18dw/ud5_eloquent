@@ -15,16 +15,16 @@
       </tr>
 
 
-      @foreach($empleado as $i)
+      
 
       <tr>
-        <td>{{$i->id}}</td>
-        <td>{{$i->nombre}}</td>
-        <td>{{$i->email}}</td>
-        <td>{{$i->telefono}}</td>
+        <td>{{$empleado->id}}</td>
+        <td>{{$empleado->nombre}}</td>
+        <td>{{$empleado->email}}</td>
+        <td>{{$empleado->telefono}}</td>
       </tr>
 
-      @endforeach
+      
 
     </table>
 

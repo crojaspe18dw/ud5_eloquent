@@ -17,3 +17,5 @@ Route::get('/', function () {
 
 
 Route::resource('proyectos','Controlador_Proyectos_Con_Recursos');
+
+Route::resource('empleados','controlador_Empleados_Recursos');
