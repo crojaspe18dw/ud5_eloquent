@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::resource('proyectos','Controlador_Proyectos_Con_Recursos');

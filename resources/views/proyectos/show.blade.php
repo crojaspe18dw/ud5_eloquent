@@ -16,18 +16,18 @@
         <th>Horas estimadas</th>
       </tr>
 
-      @foreach($proyecto as $i)
+      
 
       <tr>
-        <td>{{$i->id}}</td>
-        <td>{{$i->nombre}}</td>
-        <td>{{$i->titulo}}</td>
-        <td>{{$i->fechainicio}}</td>
-        <td>{{$i->fechafin}}</td>
-        <td>{{$i->horasestimadas}}</td>
+        <td>{{$proyecto->id}}</td>
+        <td>{{$proyecto->nombre}}</td>
+        <td>{{$proyecto->titulo}}</td>
+        <td>{{$proyecto->fechainicio}}</td>
+        <td>{{$proyecto->fechafin}}</td>
+        <td>{{$proyecto->horasestimadas}}</td>
       </tr>
 
-      @endforeach
+    
 
 
     </table>
