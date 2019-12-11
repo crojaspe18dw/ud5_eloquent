@@ -11,13 +11,13 @@
       <th>Id</th>
       <th>Nombre</th>
     </tr>
-@foreach($departamentos as $i)
+
     <tr>
       
-      <td>{{$i->id}}</td>
-      <td>{{$i->nombre}}</td>
+      <td>{{$departamento->id}}</td>
+      <td>{{$departamento->nombre}}</td>
     </tr>
-    @endforeach
+  
 
   </table>
 
