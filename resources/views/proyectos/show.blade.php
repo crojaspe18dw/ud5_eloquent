@@ -14,6 +14,7 @@
         <th>Fecha Inicio</th>
         <th>Fecha fin</th>
         <th>Horas estimadas</th>
+        <th>empleado responsable</th>
       </tr>
 
       
@@ -25,6 +26,14 @@
         <td>{{$proyecto->fechainicio}}</td>
         <td>{{$proyecto->fechafin}}</td>
         <td>{{$proyecto->horasestimadas}}</td>
+        @foreach($empleado as $j)
+
+        @if($proyecto->empleados_id == $j->id)
+        <td><a>{{$j->nombre}}</a></td>
+        @endif
+
+
+        @endforeach
       </tr>
 
     

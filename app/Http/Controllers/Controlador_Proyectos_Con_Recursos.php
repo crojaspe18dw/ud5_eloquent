@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Proyecto;
 
+use App\Empleado;
+
 
 use App\Http\Requests\validaciondeproyectos;
 
@@ -19,9 +21,10 @@ class Controlador_Proyectos_Con_Recursos extends Controller
     public function index()
     {
         $proyecto=Proyecto::all();
+        $empleado=Empleado::all();
 
 
-        return view('proyectos.index',compact('proyecto'));
+        return view('proyectos.index',compact('proyecto','empleado'));
 
     }
 
@@ -64,7 +67,9 @@ class Controlador_Proyectos_Con_Recursos extends Controller
     {
         $proyecto=Proyecto::find($id);
 
-        return view('proyectos.show',compact('proyecto'));
+        $empleado=Empleado::all();
+
+        return view('proyectos.show',compact('proyecto','empleado'));
     }
 
     /**

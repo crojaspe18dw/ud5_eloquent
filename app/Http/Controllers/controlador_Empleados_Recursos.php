@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Empleado;
 
+use App\Proyecto;
+
 class controlador_Empleados_Recursos extends Controller
 {
     /**
@@ -17,7 +19,10 @@ class controlador_Empleados_Recursos extends Controller
     {
         $empleado=Empleado::all();
 
-        return view('empleados.index',compact('empleado'));
+        $proyecto=Proyecto::all();
+
+
+        return view('empleados.index',compact('empleado','proyecto'));
     }
 
     /**
@@ -51,7 +56,9 @@ class controlador_Empleados_Recursos extends Controller
     {
         $empleado=Empleado::find($id);
 
-        return view('empleados.show',compact('empleado'));
+        $proyecto=Proyecto::all();
+
+        return view('empleados.show',compact('empleado','proyecto'));
     }
 
     /**

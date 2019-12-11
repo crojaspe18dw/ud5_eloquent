@@ -11,9 +11,10 @@
         <th>Id</th>
         <th>Nombre</th>
         <th>Titulo</th>
-        <th>Fecha Inicio</th>
+        <th>Fecha inicio</th>
         <th>Fecha fin</th>
         <th>Horas estimadas</th>
+        <th>Empleado responsable</th>
       </tr>
 
       @foreach($proyecto as $i)
@@ -25,6 +26,14 @@
         <td>{{$i->fechainicio}}</td>
         <td>{{$i->fechafin}}</td>
         <td>{{$i->horasestimadas}}</td>
+        @foreach($empleado as $j)
+
+        @if($i->empleados_id == $j->id)
+        <td><a href="empleados/{{$j->id}}">{{$j->nombre}}</a></td>
+        @endif
+
+
+        @endforeach
       </tr>
 
       @endforeach

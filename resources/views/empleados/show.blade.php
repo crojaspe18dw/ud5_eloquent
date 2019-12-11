@@ -12,6 +12,14 @@
         <th>Nombre</th>
         <th>Email</th>
         <th>Telefono</th>
+        @foreach($proyecto as $j)
+
+        @if($j->empleados_id == $empleado->id)
+        <th>proyecto del que es responsable</th>
+        @endif
+
+
+        @endforeach
       </tr>
 
 
@@ -22,6 +30,14 @@
         <td>{{$empleado->nombre}}</td>
         <td>{{$empleado->email}}</td>
         <td>{{$empleado->telefono}}</td>
+        @foreach($proyecto as $j)
+
+        @if($j->empleados_id == $empleado->id)
+        <td><a>{{$j->nombre}}</a></td>
+        @endif
+
+
+        @endforeach
       </tr>
 
       
