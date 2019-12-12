@@ -8,6 +8,8 @@ use App\Empleado;
 
 use App\Proyecto;
 
+use App\Departamento;
+
 class controlador_Empleados_Recursos extends Controller
 {
     /**
@@ -55,10 +57,13 @@ class controlador_Empleados_Recursos extends Controller
     public function show($id)
     {
         $empleado=Empleado::find($id);
+        
 
         $proyecto=Proyecto::all();
 
-        return view('empleados.show',compact('empleado','proyecto'));
+        $departamento=Departamento::where('id',$empleado->departamentos_id)->first();
+
+        return view('empleados.show',compact('empleado','proyecto','departamento'));
     }
 
     /**

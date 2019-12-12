@@ -6,7 +6,7 @@
 
   <h2>Empleados</h2>
 
-    <table>
+    <table border="1">
       <tr>
         <th>Id</th>
         <th>Nombre</th>

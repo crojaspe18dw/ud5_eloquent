@@ -6,7 +6,7 @@
 
   <h2>Departamentos</h2>
 
-  <table>
+  <table border="1">
     <tr>
       <th>Id</th>
       <th>Nombre</th>
@@ -15,7 +15,7 @@
     <tr>
       
       <td>{{$i->id}}</td>
-      <td>{{$i->nombre}}</td>
+      <td><a href="/departamentos/{{$i->id}}">{{$i->nombre}}</a></td>
     </tr>
     @endforeach
 

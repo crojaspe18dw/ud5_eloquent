@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\Departamento;
 
+use App\Empleado;
+
 class cooontrolador_departamentos_recursos extends Controller
 {
     /**
@@ -49,9 +51,13 @@ class cooontrolador_departamentos_recursos extends Controller
      */
     public function show($id)
     {
-        $departamento=Departamento::find($id);
 
-        return view('departamentos.show',compact('departamento'));
+        $departamento=Departamento::find($id);
+        $empleado=Empleado::where('departamentos_id',$id)->get();
+
+        return view('departamentos.show',compact('departamento','empleado'));
+
+        
     }
 
     /**
