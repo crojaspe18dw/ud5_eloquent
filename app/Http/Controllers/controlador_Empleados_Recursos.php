@@ -63,7 +63,10 @@ class controlador_Empleados_Recursos extends Controller
 
         $departamento=Departamento::where('id',$empleado->departamentos_id)->first();
 
-        return view('empleados.show',compact('empleado','proyecto','departamento'));
+        $empleado_proyecto = Proyecto::find($id);
+
+
+        return view('empleados.show',compact('empleado','proyecto','departamento','empleado_proyecto'));
     }
 
     /**

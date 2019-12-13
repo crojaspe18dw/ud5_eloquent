@@ -11,6 +11,8 @@
 |
 */
 
+
+
 Route::get('/', function () {
     return view('welcome');
 });
@@ -21,3 +23,5 @@ Route::resource('proyectos','Controlador_Proyectos_Con_Recursos');
 Route::resource('empleados','controlador_Empleados_Recursos');
 
 Route::resource('departamentos','cooontrolador_departamentos_recursos');
+
+

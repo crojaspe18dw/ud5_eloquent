@@ -54,6 +54,7 @@ class cooontrolador_departamentos_recursos extends Controller
 
         $departamento=Departamento::find($id);
         $empleado=Empleado::where('departamentos_id',$id)->get();
+        
 
         return view('departamentos.show',compact('departamento','empleado'));
 

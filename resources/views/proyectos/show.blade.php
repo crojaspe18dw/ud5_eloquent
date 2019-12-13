@@ -34,6 +34,11 @@
 
 
         @endforeach
+        <td>
+        @foreach($empleado_proyecto->proyecto as $r)
+        <a href="empleados/{{$r->id}}">{{$r->nombre}}</a>
+        @endforeach
+        </td>
       </tr>
 
     

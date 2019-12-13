@@ -24,7 +24,8 @@
       @foreach($empleado as $j)
       <td><a href="/empleados/{{$j->id}}">{{$j->nombre}}</a></td>
       @endforeach
-    </tr>
+      </tr>
+      
   
 
   </table>

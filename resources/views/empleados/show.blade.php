@@ -18,6 +18,7 @@
         @endif
         @endforeach
         <th>pertenece al departamento</th>
+        <th>proyectos en los que colabora</th>
       </tr>
       <tr>
         <td>{{$empleado->id}}</td>
@@ -30,6 +31,12 @@
         @endif
         @endforeach
         <td><a href="departamentos/{{$departamento->id}}">{{$departamento->nombre}}</a></td>
+        <td>
+        @foreach($empleado_proyecto->empleado as $r)
+        <a href="proyectos/{{$j->id}}">{{$r->id}}</a>
+        @endforeach
+        </td>
+        
       </tr>
 
       

@@ -69,7 +69,9 @@ class Controlador_Proyectos_Con_Recursos extends Controller
 
         $empleado=Empleado::all();
 
-        return view('proyectos.show',compact('proyecto','empleado'));
+        $empleado_proyecto = Empleado::find($id);
+
+        return view('proyectos.show',compact('proyecto','empleado','empleado_proyecto'));
     }
 
     /**
